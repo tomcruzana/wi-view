@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin:400);
+
+.fetch{
+  font-size: 18px;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.fetch:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  transition: box-shadow 200ms ease-in-out;
+}
+
+.modalDialog {
+  font-family: "Cabin", helvetica, arial, sans-serif;
+  background: rgba(0, 0, 0, 0.8);
+  color: #333;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+  display: none;
+  transition: opacity 200ms ease-in-out;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 10px 20px 15px 20px;
+  border-radius: 8px;
+  background: #fff;
+  background: #151515;
+}
+
+.close {
+  background: #606061;
+  color: #ffffff;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+  background: #ff4500;
+}
+
+.modal-btn {
+  background: linear-gradient(#fff, #999) !important;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #555 !important;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.modal-btn:hover{
+    opacity: .8 !important;
+    box-shadow: none !important;
+    transition: none !important;
+}
+
+
