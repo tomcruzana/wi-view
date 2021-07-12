@@ -8,7 +8,14 @@ const modalBox = document.querySelector("#openmodal");
 const closeModalBox = document.querySelector(".close");
 const advancedModalBtn = document.querySelector(".advanced-info-btn");
 const copyModalBtn = document.querySelector(".copy-btn");
+const refreshlBtn = document.querySelector(".btn-refresh");
 let dataLog = null;
+
+//disable context menu
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+//refresh page
+refreshlBtn.addEventListener('click', event => location.reload());
 
 //advanced modal btn
 advancedModalBtn.addEventListener("click", (e)=>{
@@ -49,7 +56,7 @@ const formatString = (data) => { //convert to regex. This is still temporary sin
 fetchBtn.addEventListener("click", async (e)=>{
     e.preventDefault();
 
-    await fetch(`/fetch-wifi-info?ssid=${search.value}`)
+    await fetch(`http://localhost:9000/fetch-wifi-info?ssid=${search.value}`)
     .then(response => response.text())
     .then(data => {
         if (data.includes("Error")) { //if data has error
@@ -70,7 +77,7 @@ fetchBtn.addEventListener("click", async (e)=>{
 
 //fetch wifi ssid 
 window.addEventListener('load', async () => {
-    await fetch(`/fetch-wifi-ssid`)
+    await fetch(`http://localhost:9000/fetch-wifi-ssid`)
         .then(raw => raw.json())
         .then(data => {
             data.SSID.forEach(e => ssidList.innerHTML += e);

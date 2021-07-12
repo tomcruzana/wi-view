@@ -1,19 +1,34 @@
 {
-  "name": "wifi-cred-fetcher",
+  "name": "wi-view",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "public/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon ./src/app.js -e js,hbs"
+    "server": "nodemon ./src/app.js -e js,hbs",
+    "dev": "nw ./",
+    "prod": "nwbuild --platforms win32,win64 --buildDir dist/ ./"
+  },
+  "window": {
+    "title": "wi-view",
+    "icon": "assets/icon.png",
+    "toolbar": true,
+    "width": 500,
+    "height": 600,
+    "min-width": 500,
+    "min-height": 600,
+    "position": "center"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.0.1",
     "nodemon": "^2.0.4",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nw": "^0.44.1-sdk",
+    "nw-builder": "^3.5.7"
   }
 }

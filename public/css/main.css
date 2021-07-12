@@ -6,6 +6,29 @@ body {
   width: 100%;
 }
 
+/* themes btn */
+.themes-div{
+  margin-top: 1.5em;
+}
+
+.btn-refresh{
+  background-color: #555555;
+  color: #fff;
+  border: none;
+  color: white;
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-refresh:hover{
+  opacity: 80%;
+}
+
 /*buy me a coffee icon*/
 .buy-me-coffee {
   margin: 100px 0 0 0;

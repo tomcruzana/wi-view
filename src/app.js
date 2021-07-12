@@ -1,5 +1,4 @@
 const path = require("path");
-const hbs = require("hbs");
 const express = require("express");
 const childProcess = require('child_process');
 const port = process.env.PORT || 9000;
@@ -8,14 +7,10 @@ const app = express();
 
 //paths for express config
 const publicDirPath = path.join(__dirname, "../public");
-const viewsPath = path.join(__dirname, "../templates/views");
-
-//template engine
-app.set("view engine", "hbs");
-app.set("views", viewsPath); //set the view dir to templates dir
 
 //use static files
 app.use(express.static(publicDirPath));
+
 
 //global regex pattern variables
 let ssidList = [];
@@ -78,7 +73,7 @@ app.get("*", (req, res)=>{ //404
 
 //local server
 app.listen(port, ()=>{
-    console.log("server running on port" + port);
+    console.log("server running on port " + port + ". don't close this window!");
 });
 
 //next goal: make output user-friendly
