@@ -1,5 +1,5 @@
 # wi-view
-A desktop app powered by Electron that fetches your saved wifi passwords and other credentials.
+An electron-powered desktop application that lets you fetch your stored WiFi passwords and other credentials.
 
 # how to use
 - "npm install" to install dependencies
